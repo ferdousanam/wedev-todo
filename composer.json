@@ -1,0 +1,19 @@
+{
+	"name": "ferdousanam/todo",
+	"authors": [
+		{
+			"name": "Ferdous Anam",
+			"email": "ferdous.anam@gmail.com"
+		}
+	],
+	"autoload": {
+		"files": [
+			"connection.php"
+		],
+		"classmap": [
+			"controllers",
+			"classes"
+		]
+	},
+	"require": {}
+}
