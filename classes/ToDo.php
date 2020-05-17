@@ -53,6 +53,18 @@ class ToDo {
 		}
 	}
 
+	public function destroyByStatus($status) {
+		$stmt = $this->connection->prepare("DELETE FROM `$this->table` WHERE `status` = :status");
+		$stmt->bindParam(':status', $status);
+		$stmt->execute();
+		$count = $stmt->rowCount();
+		if ($count > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	public function getAllByStatus($status) {
 		$stmt = $this->connection->prepare("SELECT * FROM `$this->table` WHERE `status` = :status");
 		$stmt->bindParam(':status', $status);

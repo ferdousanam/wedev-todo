@@ -35,6 +35,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 			header('Content-Type: application/json');
 			echo json_encode(['error' => 'id and status field are required']);
 		}
+	} else if (isset($_POST['clear_completed']) && $_POST['clear_completed'] == true) {
+		// Store To Do
+		echo $todo->destroyByStatus(2);
 	} else if (isset($_POST['title'])) {
 		// Store To Do
 		echo $todo->store($_POST);

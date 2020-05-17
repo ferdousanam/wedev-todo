@@ -36,6 +36,11 @@ class ToDoController {
 		return json_encode($this->todo->destroy($id));
 	}
 
+	public function destroyByStatus($status) {
+		header('Content-Type: application/json');
+		return json_encode($this->todo->destroyByStatus($status));
+	}
+
 	public function getAllByStatus($status) {
 		header('Content-Type: application/json');
 		return json_encode($this->todo->getAllByStatus($status));
