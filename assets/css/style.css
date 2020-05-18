@@ -1,0 +1,204 @@
+body {
+	margin: 0;
+	font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	text-align: left;
+	background-color: #fff;
+}
+
+.text-completed {
+	text-decoration: line-through;
+	color: #00000075;
+	opacity: 0.30;
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.app-name {
+	text-align: center;
+}
+
+.app-name > h1 {
+	font-size: 70px;
+	color: #EDDFDF;
+}
+
+.to-do-area {
+	max-width: 700px;
+	margin: auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+}
+
+.to-do-area:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.to-do-area-content {
+	margin: 15px;
+	padding-bottom: 5px;
+}
+
+.todo-input {
+	width: 100%;
+	padding: 15px 20px;
+	margin: 0;
+	box-sizing: border-box;
+	border: 1px solid #eee;
+	font-size: 26px;
+}
+
+.to-do-list {
+	list-style: none;
+	font-size: 24px;
+}
+
+.to-do-list .check {
+	border: 1px solid rgba(33, 37, 41, 0.58);
+	padding: 5px 10px;
+	font-size: 11px;
+	border-radius: 50%;
+	font-weight: bold;
+	color: green;
+	cursor: pointer;
+}
+
+/* The container */
+.checkbox-container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin: 0 10px 12px 10px;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.checkbox-container input[type=text] {
+	width: 100%;
+	padding: 15px 20px;
+	margin: 0;
+	box-sizing: border-box;
+	border: 1px solid #eee;
+	font-size: 26px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input[type=checkbox] {
+	position: absolute;
+	opacity: 0;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #fff;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input[type=checkbox] ~ .checkmark {
+	background-color: #fff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input[type=checkbox]:checked ~ .checkmark {
+	margin-top: 3px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input[type=checkbox]:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid green;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.checkbox-container > .checkmark:hover {
+	margin-top: 3px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+}
+
+.to-do-title .close-button {
+	float: right;
+	cursor: pointer;
+	color: hsla(230, 8%, 60%, 1);
+}
+
+.to-do-title:hover {
+	opacity: 1;
+}
+
+.to-do-footer-area {
+	display: flex;
+	color: #00000075;
+	flex-wrap: wrap;
+}
+
+.to-do-footer-area div {
+	padding: 10px;
+	width: 30%;
+}
+
+.to-do-footer-area div a {
+	color: #00000075;
+	text-decoration: none;
+}
+
+.to-do-footer-area div a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.nav-pane .active {
+	border: 1px solid #eee;
+}
+
+.nav-pane span {
+	cursor: pointer;
+	padding: 0 10px;
+}
+
+.show {
+	display: inline-block;
+}
+
+.hide {
+	display: none;
+}

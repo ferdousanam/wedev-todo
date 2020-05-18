@@ -31,6 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 		// Update Status
 		if (isset($_POST['id']) && $_POST['status']) {
 			echo $todo->updateStatus($_POST['id'], $_POST['status']);
+		} else if (isset($_POST['id']) && $_POST['title']) {
+			echo $todo->update($_POST['id'], $_POST);
 		} else {
 			header('Content-Type: application/json');
 			echo json_encode(['error' => 'id and status field are required']);

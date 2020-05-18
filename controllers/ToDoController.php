@@ -31,6 +31,11 @@ class ToDoController {
 		return json_encode($this->todo->show($id));
 	}
 
+	public function update($id, $data) {
+		header('Content-Type: application/json');
+		return json_encode($this->todo->update($id, $data));
+	}
+
 	public function destroy($id) {
 		header('Content-Type: application/json');
 		return json_encode($this->todo->destroy($id));
