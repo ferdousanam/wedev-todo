@@ -8,6 +8,7 @@
 	],
 	"autoload": {
 		"files": [
+			"helpers.php",
 			"connection.php"
 		],
 		"classmap": [
@@ -15,5 +16,7 @@
 			"classes"
 		]
 	},
-	"require": {}
+	"require": {
+		"vlucas/phpdotenv": "^4.1"
+	}
 }

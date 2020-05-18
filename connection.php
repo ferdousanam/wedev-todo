@@ -1,12 +1,15 @@
 <?php
+require_once 'vendor/autoload.php';
 
 function getConnection() {
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "todo";
+	$dbConnection = env('DB_CONNECTION', 'mysql');
+	$servername = env('DB_HOST', 'localhost');
+	$port = env('DB_PORT', '3306');
+	$username = env('DB_USERNAME', 'root');
+	$password = env('DB_PASSWORD', '');
+	$dbname = env('DB_DATABASE', 'todo');
 	try {
-		$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+		$conn = new PDO("$dbConnection:host=$servername;port=$port;dbname=$dbname", $username, $password);
 		// Set the PDO error mode to exception
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $conn;
